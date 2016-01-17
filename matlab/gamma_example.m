@@ -100,5 +100,5 @@ xlim(ax3,[0 tau_c*1e3*3]);
 set(gcf, 'Color', 'w');
 
 %% K-S test
-pd = makedist('Gamma','a',alpha,'b',1/alpha);
+pd = makedist('Gamma','a',alpha,'b',theta);
 [h,p] = kstest(datasample(x(1,:),1000,'Replace',false),'CDF',pd,'alpha',0.05)
